@@ -1,0 +1,19 @@
+Cambodia Used Car Residual Value Estimator v2
+
+This Streamlit app estimates vehicle residual value using cleaned Cambodia market-price, sold-vehicle, and model-grade datasets.
+
+Version 2 key improvement:
+- The app now clearly distinguishes the 2024 Q3 observed market-price reference from 2025-2027 projected values.
+- A valuation reference selector lets users choose 2024 Q3, 2025, 2026, or 2027.
+- 2025-2027 outputs are shown as projections based on 2024 Q3 data and data-driven annual depreciation assumptions, not as real-time market prices.
+
+Cleaned app data:
+- market_price_clean.csv: 15,011 price observations
+- new_price_reference.csv: 200 reference-new-price records
+- sold_vehicle_validation.csv: 144 sold-vehicle benchmark records
+- grade_lookup.csv: 224 vehicle grade records
+
+Base model:
+- RandomForestRegressor trained on log(car_price)
+- 2024 Q3 observed-reference value estimated first
+- Future-year values projected from the base value using depreciation rates

@@ -1,0 +1,14 @@
+{
+  "training_rows": 15011,
+  "test_rows": 3003,
+  "r2_log_price": 0.9180536036495163,
+  "mae_price_usd": 4643.776251369366,
+  "median_ae_price_usd": 2193.7756229418665,
+  "price_cap_usd": 300000,
+  "model_note": "RandomForestRegressor trained on log(car_price) using cleaned contract/market price observations. Contract/customer identifiers are excluded.",
+  "grade_match_rate": 0.8875491306375325,
+  "residual_ratio_available_rows": 14594,
+  "base_reference_year": 2024,
+  "base_reference_period": "2024 Q3 observed market reference",
+  "projection_note": "2025-2027 app values are projections based on 2024 Q3 base model value and annual depreciation assumptions; they are not real-time market prices."
+}
